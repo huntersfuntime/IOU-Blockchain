@@ -34,7 +34,7 @@ class Blockchain {
             console.log('The incoming chain is not valid.');
             return;
         }
-        console.log('Replacing blochchain with new chain');
+        console.log('Replacing blockchain with new chain');
         this.chain = newChain;
     }
 }
