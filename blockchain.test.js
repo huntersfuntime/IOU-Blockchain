@@ -25,4 +25,10 @@ describe('Blockchain', () => {
 
         expect(bc.isValidChain(bc2.chain)).toBe(true);
     });
+
+    if('validates a chain with corrupt genesis block', () => {
+        bc2.chain[0].data = 'Bad data';
+
+        expect(bc.isValidChain(bc2.chain)).toBe(false);
+    });
 });
