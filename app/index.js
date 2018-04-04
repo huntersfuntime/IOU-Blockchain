@@ -1,12 +1,12 @@
 const express = require('express');
 const Blockchain = require('../blockchain');
 
-const HTTP_PORT = proccess.env.HTTP_PORT || 3001;
+const HTTP_PORT = process.env.HTTP_PORT || 3001;
 
 const app = express();
 const bc = new Blockchain();
 
-app.get('/blocks', (req, res) =>{
+app.get('/blocks', (req, res) => {
     res.json(bc.chain);
 });
 
